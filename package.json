@@ -1,0 +1,68 @@
+{
+  "name": "@yours/guard",
+  "version": "0.1.0",
+  "description": "Deterministic, zero-cloud indirect prompt injection (IDPI) defense and capability policy firewall for Chrome MV3 and Web-based browser AI agents.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./contracts": {
+      "types": "./dist/contracts.d.ts",
+      "import": "./dist/contracts.js"
+    },
+    "./sanitizer": {
+      "types": "./dist/sanitizer/index.d.ts",
+      "import": "./dist/sanitizer/index.js"
+    },
+    "./taint": {
+      "types": "./dist/taint/index.d.ts",
+      "import": "./dist/taint/index.js"
+    },
+    "./policy": {
+      "types": "./dist/policy/index.d.ts",
+      "import": "./dist/policy/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "ARCHITECTURE.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "ai-security",
+    "prompt-injection",
+    "indirect-prompt-injection",
+    "idpi",
+    "browser-agent",
+    "chrome-mv3",
+    "capability-firewall",
+    "taint-tracking",
+    "lethal-trifecta",
+    "yours-research"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yours-research/yours-guard.git"
+  },
+  "homepage": "https://yours.sh",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0"
+  }
+}
