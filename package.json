@@ -39,6 +39,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "prepare": "npm run build",
     "typecheck": "tsc --noEmit",
     "build": "tsc -p tsconfig.build.json",
     "test": "vitest run",
